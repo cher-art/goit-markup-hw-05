@@ -82,7 +82,7 @@ section .title {
 /* HEADER */
 
 .page-header .link{
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-header .link:hover,
@@ -105,6 +105,11 @@ section .title {
   margin-left: 85px;
 }
 
+.site-nav .item{
+  position: relative;
+  
+}
+
 .site-nav .item + .item {
   margin-left: 50px;
 }
@@ -120,7 +125,19 @@ section .title {
   text-decoration: none;
 
   color: var(--primery-text-color);
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current:after{
+  position: absolute;
+  content: "";
+  display: block;
+  margin-top: 27px;
+  border-radius: 2px;
+  width: 100%; 
+  height: 4px;
+  background-color: var(--accent-text-color);
+
 }
 
 .auth-nav {
@@ -179,7 +196,9 @@ section .title {
 /* ГЕРОЙ */
 
 .hero {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(../images/people_working.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,21 +206,40 @@ section .title {
   background-color: var(--primery-text-color);
 }
 
-.hero .title {
-  margin: 0 auto;
-  width: 696px;
+.hero-section{
   padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 696px;
+}
+
+.hero .title {
+  text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.3;
   color: var(--plain-text-color);
 }
 
+.hero-button {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 10px 32px;
+  min-width: 136px;
+  margin-top: 30px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: var(--accent-text-color);
+  color: var(--plain-text-color);
+  text-decoration: none;
+  text-align: center;
+}
+
 /* ПРИЕМУЩЕСТВА */
 
 .advantages {
   padding-top: 96px;
-  padding-bottom: 95px;
 }
 
 .invisible {
@@ -214,8 +252,12 @@ section .title {
 }
 
 .advantages .background{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #F5F4FA;
-  padding: 25px 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 50px;
 }
 
@@ -241,6 +283,7 @@ section .title {
 }
 
 .advantages-title {
+  text-transform: uppercase;
   padding-bottom: 10px;
 }
 
@@ -253,8 +296,9 @@ section .title {
 
 /* О НАС */
 
-.about-us {
+.about-us-section{
   padding-bottom: 94px;
+  padding-top: 95px;
 }
 
 .about-us .title {
@@ -510,28 +554,15 @@ section .title {
   background-color: var(--accent-text-color);
 }
 
-.hero-button {
-  display: inline-block;
-  border-radius: 6px;
-  padding: 10px 32px;
-  min-width: 136px;
-  margin-top: 30px;
-  margin-bottom: 200px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.8;
-  background-color: var(--accent-text-color);
-  color: var(--plain-text-color);
-  text-decoration: none;
-  text-align: center;
-}
-
 .page-footer .social:hover {
   background-color: var(--accent-text-color);
 }
 
 /* ПОРТФОЛИО */
+
+.portfolio-main{
+  padding-top:94px;
+}
 
 .portfolio-header {
   border-bottom: 1px solid #f5f4fa;
@@ -630,7 +661,6 @@ section .title {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
