@@ -328,54 +328,52 @@
       </section>
 <!-- КЛИЕНТЫ -->
       <section class="clients container">
-        <div class="">
-          <h2 class="title">Постоянные клиенты</h2>
-            <ul class="list">
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-2"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-3"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-4"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-5"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="item">
-                <a class="link" href="">
-                  <svg class="link-svg">
-                    <use href="./images/sprite.svg#icon-client-6"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-        </div>
-      </section>
+      <h2 class="title">Постоянные клиенты</h2>
+        <ul class="list">
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 44px; height: 49px;">
+                <use href="./images/sprite.svg#icon-client-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 40px; height: 52px;">
+                <use href="./images/sprite.svg#icon-client-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 41px; height: 43px;">
+                <use href="./images/sprite.svg#icon-client-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 80px; height: 42px;">
+                <use href="./images/sprite.svg#icon-client-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 59px; height: 47px;">
+                <use href="./images/sprite.svg#icon-client-5"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a class="link" href="">
+              <svg style="width: 88px; height: 45px;">
+                <use href="./images/sprite.svg#icon-client-6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+    </section>
     </main>
 
     <footer class="page-footer">
@@ -435,13 +433,29 @@
       </div> -->
     </footer>
 <!-- МОДАЛЬНОЕ ОКНО -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="modal is-hidden" data-modal>
       <div class="form-wrapper">
-          <button class="close-btn" type="button" data-modal-close>
-            <svg class="button-svg">
-              <use href="./images/sprite.svg#close-back" ></use>
-            </svg>
-          </button>
+
+      <button class="close-btn" type="button" data-modal-close>
+        <svg class="button-svg">
+          <use href="./images/sprite.svg#close-back" ></use>
+        </svg>
+      </button>
+
+        <div class="modal-container">
+          <h2 class="modal-text">Оставьте свои данные, мы вам перезвоним</h2>
+          
+          <form class="modal-form" saction="">
+            <input type="text" class="modal-form-input" placeholder="имя" required>
+            <input type="tel" class="modal-form-input" placeholder="Телефон" required>
+            <textarea name="user-message" class="modal-form-message" id="" cols="30" rows="10"></textarea>
+
+            <input type="checkbox" name="user-poloci" value="accept-policy" id="user-poloci" class="modal-form-check-policy">
+            <label for="user-policy" class="check-label" target="_blanck">Я соглашаюсь с <a href="#">политикой конфединциальности</a></label>
+            <button class="modal-button">Отправить</button>
+          </form>
+        </div>
+          
       </div>
     </div>
   </body>
