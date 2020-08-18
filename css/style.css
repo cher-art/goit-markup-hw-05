@@ -199,7 +199,7 @@ section .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/people_working.jpg);
+  background-image: linear-gradient( rgba(47, 48, 58, 0.4),  rgba(47, 48, 58, 0.4)), url(../images/people_working.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -341,12 +341,13 @@ section .title {
 /* НАША КОМАНДА */
 
 .our-team {
+  padding-top: 94px;
   background-color: #f5f4fa;
   padding-bottom: 94px;
 }
 
 .our-team .title {
-  padding-top: 94px;
+  
   margin-bottom: 50px;
 }
 
@@ -424,16 +425,19 @@ section .title {
 }
 
 /* КЛИЕНТЫ */
+.clients{
+  padding: 94px 0;
+}
 
 .clients .title{
-  padding-top: 94px;
+  
   margin-bottom: 50px;
 }
 
 .clients .list{
   display: flex;
   justify-content: space-between;
-  padding-bottom: 94px;
+  
 }
 
 .clients .item{
@@ -561,7 +565,7 @@ section .title {
 /* ПОРТФОЛИО */
 
 .portfolio-main{
-  padding-top:94px;
+  padding:94px 0;
 }
 
 .portfolio-header {
@@ -585,7 +589,7 @@ section .title {
 }
 
 .portfolio .list:nth-last-child(-n + 3) {
-  margin-bottom: 94px;
+  margin-bottom: 0;
 }
 
 .portfolio .link {
